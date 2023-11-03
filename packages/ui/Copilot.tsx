@@ -18,7 +18,7 @@ interface CopilotProps {
 
 // Create an OpenAI API client (that's edge friendly!)
 const config = new Configuration({
-  apiKey: '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',
+  apiKey: process.env.OPENAI_API_KEY || '',
 });
 const openai = new OpenAIApi(config);
 
